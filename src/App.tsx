@@ -6,13 +6,17 @@ function App() {
 		<div className="App">
 			<header className="App-header">
 				<Button>Hello</Button>
+				<Button btnType={ButtonType.Primary} className="test-btn">
+					Hello
+				</Button>
+				<Button btnType={ButtonType.Danger}>Hello</Button>
 				<Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
 					Hello
 				</Button>
 				<Button btnType={ButtonType.Primary} size={ButtonSize.Small}>
 					Hello
 				</Button>
-				<Button btnType={ButtonType.Danger} size={ButtonSize.Small}>
+				<Button btnType={ButtonType.Danger} size={ButtonSize.Large}>
 					Hello
 				</Button>
 				<Button btnType={ButtonType.Danger} size={ButtonSize.Small}>
@@ -21,7 +25,7 @@ function App() {
 				<Button btnType={ButtonType.Danger} size={ButtonSize.Small} disabled>
 					disabled button
 				</Button>
-				<Button btnType={ButtonType.Link} href="https://www.baidu.com">
+				<Button btnType={ButtonType.Link} href="https://www.baidu.com" target="_blank">
 					Hello
 				</Button>
 				<Button btnType={ButtonType.Link} href="https://www.baidu.com" disabled>
