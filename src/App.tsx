@@ -1,34 +1,34 @@
 import React from 'react';
-import Button, { ButtonSize, ButtonType } from './components/Button/button';
+import Button from './components/Button/button';
 
 function App() {
 	return (
 		<div className="App">
 			<header className="App-header">
-				<Button>Hello</Button>
-				<Button btnType={ButtonType.Primary} className="test-btn">
+				<Button onClick={() => alert(1)}>Hello</Button>
+				<Button btnType="primary" className="test-btn">
 					Hello
 				</Button>
-				<Button btnType={ButtonType.Danger}>Hello</Button>
-				<Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
+				<Button btnType="danger">Hello</Button>
+				<Button btnType="primary" size="lg">
 					Hello
 				</Button>
-				<Button btnType={ButtonType.Primary} size={ButtonSize.Small}>
+				<Button btnType="primary" size="sm">
 					Hello
 				</Button>
-				<Button btnType={ButtonType.Danger} size={ButtonSize.Large}>
+				<Button btnType="danger" size="lg">
 					Hello
 				</Button>
-				<Button btnType={ButtonType.Danger} size={ButtonSize.Small}>
+				<Button btnType="danger" size="sm">
 					Hello
 				</Button>
-				<Button btnType={ButtonType.Danger} size={ButtonSize.Small} disabled>
+				<Button btnType="danger" size="sm" disabled>
 					disabled button
 				</Button>
-				<Button btnType={ButtonType.Link} href="https://www.baidu.com" target="_blank">
+				<Button btnType="link" href="https://www.baidu.com" target="_blank">
 					Hello
 				</Button>
-				<Button btnType={ButtonType.Link} href="https://www.baidu.com" disabled>
+				<Button btnType="link" href="https://www.baidu.com" disabled>
 					Hello
 				</Button>
 			</header>
