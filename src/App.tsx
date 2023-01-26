@@ -9,17 +9,24 @@ function App() {
 				<Button btnType={ButtonType.Primary} size={ButtonSize.Large}>
 					Hello
 				</Button>
+				<Button btnType={ButtonType.Primary} size={ButtonSize.Small}>
+					Hello
+				</Button>
+				<Button btnType={ButtonType.Danger} size={ButtonSize.Small}>
+					Hello
+				</Button>
+				<Button btnType={ButtonType.Danger} size={ButtonSize.Small}>
+					Hello
+				</Button>
+				<Button btnType={ButtonType.Danger} size={ButtonSize.Small} disabled>
+					disabled button
+				</Button>
 				<Button btnType={ButtonType.Link} href="https://www.baidu.com">
 					Hello
 				</Button>
-				<a
-					className="App-link"
-					href="https://reactjs.org"
-					target="_blank"
-					rel="noopener noreferrer"
-				>
-					Learn React
-				</a>
+				<Button btnType={ButtonType.Link} href="https://www.baidu.com" disabled>
+					Hello
+				</Button>
 			</header>
 		</div>
 	);
