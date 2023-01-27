@@ -6,20 +6,22 @@ import MenuItem from './components/Menu/menuItem';
 function App() {
 	return (
 		<div className="App">
-			<Menu defaultIndex={0} onSelect={(index) => alert(index)}>
+			<Menu defaultIndex={0}>
 				<MenuItem index={0}>tab1</MenuItem>
 				<MenuItem index={1} disabled>
 					tab2
 				</MenuItem>
 				<MenuItem index={2}>tab3</MenuItem>
 			</Menu>
-			<Menu defaultIndex={0} onSelect={(index) => alert(index)} mode="vertical">
-				<MenuItem index={0}>tab1</MenuItem>
-				<MenuItem index={1} disabled>
-					tab2
-				</MenuItem>
-				<MenuItem index={2}>tab3</MenuItem>
-			</Menu>
+			<div style={{ padding: '20px' }}>
+				<Menu defaultIndex={0} mode="vertical">
+					<MenuItem index={0}>tab1</MenuItem>
+					<MenuItem index={1} disabled>
+						tab2
+					</MenuItem>
+					<MenuItem index={2}>tab3</MenuItem>
+				</Menu>
+			</div>
 			<header className="App-header">
 				<Button onClick={() => alert(1)}>Hello</Button>
 				<Button btnType="primary" className="test-btn">
