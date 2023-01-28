@@ -4,22 +4,20 @@ import Menu, { IMenuProps } from './menu';
 import MenuItem from './menuItem';
 
 const testProps: IMenuProps = {
-	defaultIndex: 0,
+	defaultIndex: '0',
 	onSelect: jest.fn(),
 	className: 'test-class',
 };
 const testVerticalProps: IMenuProps = {
 	mode: 'vertical',
-	defaultIndex: 0,
+	defaultIndex: '0',
 };
 const genMenu = (props: IMenuProps) => {
 	return (
 		<Menu {...props}>
-			<MenuItem index={0}>tab1</MenuItem>
-			<MenuItem index={1} disabled>
-				tab2
-			</MenuItem>
-			<MenuItem index={2}>tab3</MenuItem>
+			<MenuItem>tab1</MenuItem>
+			<MenuItem disabled>tab2</MenuItem>
+			<MenuItem>tab3</MenuItem>
 		</Menu>
 	);
 };

@@ -4,7 +4,7 @@ import { MenuContext } from './menu';
 import { useContext } from 'react';
 
 export interface IMenuItemProps {
-	index?: number;
+	index?: string;
 	children?: React.ReactNode;
 	className?: string;
 	style?: React.CSSProperties;
@@ -19,7 +19,7 @@ const MenuItem: React.FC<IMenuItemProps> = (props) => {
 		'is-active': index === context.index,
 	});
 	const handleClick = () => {
-		if (context.onSelect && !disabled && typeof index === 'number') {
+		if (context.onSelect && !disabled && typeof index === 'string') {
 			context.onSelect(index);
 		}
 	};
@@ -31,7 +31,7 @@ const MenuItem: React.FC<IMenuItemProps> = (props) => {
 };
 
 MenuItem.defaultProps = {
-	index: 0,
+	index: '0',
 	disabled: false,
 };
 

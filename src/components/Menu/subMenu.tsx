@@ -5,7 +5,7 @@ import { IMenuItemProps } from './menuItem';
 import { MenuContext } from './menu';
 
 export interface ISubMenuProps {
-	index?: number;
+	index?: string;
 	title: string;
 	children?: React.ReactNode;
 	className?: string;
@@ -52,11 +52,13 @@ const SubMenu: FC<ISubMenuProps> = (props) => {
 		const subMenuClasses = classnames('fobiz-submenu', {
 			'menu-opened': isOpen,
 		});
-		const childrenElement = React.Children.map(children, (child) => {
+		const childrenElement = React.Children.map(children, (child, i) => {
 			const childElement = child as React.FunctionComponentElement<IMenuItemProps>;
 			const { name: tagName } = childElement.type;
 			if (tagName === 'MenuItem') {
-				return child;
+				return React.cloneElement(childElement, {
+					index: `${index}-${i}`,
+				});
 			} else {
 				console.error('Warning: SubMenu has a child which is not a MenuItem component');
 			}
