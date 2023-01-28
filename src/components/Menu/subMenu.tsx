@@ -3,6 +3,8 @@ import classnames from 'classnames';
 import { FC, useContext, useState } from 'react';
 import { IMenuItemProps } from './menuItem';
 import { MenuContext } from './menu';
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import Icon from '../Icon/icon';
 
 export interface ISubMenuProps {
 	index?: string;
@@ -19,6 +21,8 @@ const SubMenu: FC<ISubMenuProps> = (props) => {
 	const [isOpen, setIsOpen] = useState(index && context.mode === 'vertical' ? openSubMenus.includes(index) : false);
 	const classes = classnames('fobiz-menu-item fobiz-submenu-item', className, {
 		'is-active': context.activeIndex.startsWith(index || '0'),
+		'is-vertical': context.mode === 'vertical',
+		'is-opened': isOpen,
 	});
 	const handleClick = (e: React.MouseEvent) => {
 		e.preventDefault();
@@ -71,6 +75,7 @@ const SubMenu: FC<ISubMenuProps> = (props) => {
 		<li key={index} className={classes} {...hoverEvents}>
 			<div className="submenu-title" {...clickEvents}>
 				{title}
+				<Icon icon={faAngleDown} className="arrow-icon" />
 			</div>
 			{renderChildren()}
 		</li>
