@@ -8,23 +8,23 @@ function App() {
 	return (
 		<div className="App">
 			<Menu defaultIndex={0}>
-				<MenuItem index={0}>tab1</MenuItem>
-				<MenuItem index={1} disabled>
-					tab2
-				</MenuItem>
-				<MenuItem index={2}>tab3</MenuItem>
-				<SubMenu title="abncde">
-					<MenuItem index={2}>tab3</MenuItem>
-					<MenuItem index={2}>tab3</MenuItem>
+				<MenuItem>tab1</MenuItem>
+				<MenuItem disabled>tab2</MenuItem>
+				<MenuItem>tab3</MenuItem>
+				<SubMenu title="dropdown">
+					<MenuItem>dropdown1</MenuItem>
+					<MenuItem>tab3</MenuItem>
 				</SubMenu>
 			</Menu>
 			<div style={{ padding: '20px' }}>
 				<Menu defaultIndex={0} mode="vertical">
-					<MenuItem index={0}>tab1</MenuItem>
-					<MenuItem index={1} disabled>
-						tab2
-					</MenuItem>
-					<MenuItem index={2}>tab3</MenuItem>
+					<MenuItem>tab1</MenuItem>
+					<MenuItem disabled>tab2</MenuItem>
+					<SubMenu title="dropdown">
+						<MenuItem>dropdown1</MenuItem>
+						<MenuItem>tab4</MenuItem>
+					</SubMenu>
+					<MenuItem>tab3</MenuItem>
 				</Menu>
 			</div>
 			<header className="App-header">
