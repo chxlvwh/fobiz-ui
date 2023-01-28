@@ -16,13 +16,13 @@ export interface IMenuProps {
 }
 
 interface IMenuContext {
-	index: string;
+	activeIndex: string;
 	onSelect?: SelectCallback;
 	mode?: MenuMode;
 	defaultOpenSubMenus?: string[];
 }
 
-export const MenuContext = createContext<IMenuContext>({ index: '0' });
+export const MenuContext = createContext<IMenuContext>({ activeIndex: '0' });
 
 const Menu: React.FC<IMenuProps> = (props) => {
 	const { defaultIndex, className, mode, style, onSelect, children, defaultOpenSubMenus } = props;
@@ -39,7 +39,7 @@ const Menu: React.FC<IMenuProps> = (props) => {
 		}
 	};
 	const passedContext: IMenuContext = {
-		index: currentActiveIndex ? currentActiveIndex : '0',
+		activeIndex: currentActiveIndex ? currentActiveIndex : '0',
 		onSelect: handleSelect,
 		mode,
 		defaultOpenSubMenus,

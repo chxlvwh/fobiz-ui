@@ -16,7 +16,7 @@ const MenuItem: React.FC<IMenuItemProps> = (props) => {
 	const context = useContext(MenuContext);
 	const classes = classnames('fobiz-menu-item', className, {
 		'is-disabled': disabled,
-		'is-active': index === context.index,
+		'is-active': index === context.activeIndex,
 	});
 	const handleClick = () => {
 		if (context.onSelect && !disabled && typeof index === 'string') {

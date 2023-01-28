@@ -18,7 +18,7 @@ const SubMenu: FC<ISubMenuProps> = (props) => {
 	const openSubMenus = context.defaultOpenSubMenus as string[];
 	const [isOpen, setIsOpen] = useState(index && context.mode === 'vertical' ? openSubMenus.includes(index) : false);
 	const classes = classnames('fobiz-menu-item fobiz-submenu-item', className, {
-		'is-active': context.index === index,
+		'is-active': context.activeIndex.startsWith(index || '0'),
 	});
 	const handleClick = (e: React.MouseEvent) => {
 		e.preventDefault();
