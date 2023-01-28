@@ -10,11 +10,11 @@ function App() {
 			<Menu defaultIndex="0" defaultOpenSubMenus={['3']}>
 				<MenuItem>tab1</MenuItem>
 				<MenuItem disabled>tab2</MenuItem>
-				<MenuItem>tab3</MenuItem>
 				<SubMenu title="dropdown">
 					<MenuItem>dropdown1</MenuItem>
-					<MenuItem>tab3</MenuItem>
+					<MenuItem>dropdown2</MenuItem>
 				</SubMenu>
+				<MenuItem>tab3</MenuItem>
 			</Menu>
 			<div style={{ padding: '20px' }}>
 				<Menu defaultIndex="0" mode="vertical" defaultOpenSubMenus={['2']}>
