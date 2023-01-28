@@ -1,10 +1,11 @@
 import * as React from 'react';
 import classnames from 'classnames';
-import { FC, useContext, useState } from 'react';
+import { FC, useContext, useRef, useState } from 'react';
 import { IMenuItemProps } from './menuItem';
 import { MenuContext } from './menu';
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import Icon from '../Icon/icon';
+import Transition from '../Transition/transition';
 
 export interface ISubMenuProps {
 	index?: string;
@@ -69,7 +70,14 @@ const SubMenu: FC<ISubMenuProps> = (props) => {
 				console.error('Warning: SubMenu has a child which is not a MenuItem component');
 			}
 		});
-		return <ul className={subMenuClasses}>{childrenElement}</ul>;
+		const nodeRef = useRef(null);
+		return (
+			<Transition in={isOpen} timeout={300} animation="zoom-in-top" nodeRef={nodeRef}>
+				<ul ref={nodeRef} className={subMenuClasses}>
+					{childrenElement}
+				</ul>
+			</Transition>
+		);
 	};
 	return (
 		<li key={index} className={classes} {...hoverEvents}>

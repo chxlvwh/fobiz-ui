@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from './components/Button/button';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
 import SubMenu from './components/Menu/subMenu';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import Icon from './components/Icon/icon';
+import { CSSTransition } from 'react-transition-group';
 
 function App() {
+	const [showMessage, setShowMessage] = useState(false);
 	return (
 		<div className="App">
+			<CSSTransition in={showMessage} timeout={300} classNames="zoom-in-top" unmountOnExit>
+				<div>123</div>
+			</CSSTransition>
 			<Icon icon={faCoffee} theme="primary" size="2x" />
 			<Icon icon={faCoffee} theme="danger" size="2x" />
 			<Icon icon={faCoffee} theme="info" size="2x" />
@@ -36,7 +41,7 @@ function App() {
 				</Menu>
 			</div>
 			<header className="App-header">
-				<Button onClick={() => alert(1)}>Hello</Button>
+				<Button onClick={() => setShowMessage(!showMessage)}>toggle</Button>
 				<Button btnType="primary" className="test-btn">
 					Hello
 				</Button>
