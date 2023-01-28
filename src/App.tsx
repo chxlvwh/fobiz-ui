@@ -3,10 +3,18 @@ import Button from './components/Button/button';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
 import SubMenu from './components/Menu/subMenu';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import Icon from './components/Icon/icon';
 
 function App() {
 	return (
 		<div className="App">
+			<Icon icon={faCoffee} theme="primary" size="2x" />
+			<Icon icon={faCoffee} theme="danger" size="2x" />
+			<Icon icon={faCoffee} theme="info" size="2x" />
+			<Icon icon={faCoffee} theme="warning" size="2x" />
+			<Icon icon={faCoffee} theme="light" size="2x" />
+			<Icon icon={faCoffee} theme="dark" size="2x" />
 			<Menu defaultIndex="0" defaultOpenSubMenus={['3']}>
 				<MenuItem>tab1</MenuItem>
 				<MenuItem disabled>tab2</MenuItem>
