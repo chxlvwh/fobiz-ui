@@ -6,7 +6,7 @@ import MenuItem from './menuItem';
 const testProps: IMenuProps = {
 	defaultIndex: 0,
 	onSelect: jest.fn(),
-	classNames: 'test-class',
+	className: 'test-class',
 };
 const testVerticalProps: IMenuProps = {
 	mode: 'vertical',

@@ -2,6 +2,7 @@ import React from 'react';
 import Button from './components/Button/button';
 import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
+import SubMenu from './components/Menu/subMenu';
 
 function App() {
 	return (
@@ -12,6 +13,10 @@ function App() {
 					tab2
 				</MenuItem>
 				<MenuItem index={2}>tab3</MenuItem>
+				<SubMenu title="abncde">
+					<MenuItem index={2}>tab3</MenuItem>
+					<MenuItem index={2}>tab3</MenuItem>
+				</SubMenu>
 			</Menu>
 			<div style={{ padding: '20px' }}>
 				<Menu defaultIndex={0} mode="vertical">
