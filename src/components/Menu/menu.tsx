@@ -12,18 +12,20 @@ export interface IMenuProps {
 	mode?: MenuMode;
 	style?: React.CSSProperties;
 	onSelect?: SelectCallback;
+	defaultOpenSubMenus?: string[];
 }
 
 interface IMenuContext {
 	index: string;
 	onSelect?: SelectCallback;
 	mode?: MenuMode;
+	defaultOpenSubMenus?: string[];
 }
 
 export const MenuContext = createContext<IMenuContext>({ index: '0' });
 
 const Menu: React.FC<IMenuProps> = (props) => {
-	const { defaultIndex, className, mode, style, onSelect, children } = props;
+	const { defaultIndex, className, mode, style, onSelect, children, defaultOpenSubMenus } = props;
 	const [currentActiveIndex, setCurrentActiveIndex] = React.useState<string>(defaultIndex || '0');
 
 	const classes = classnames('fobiz-menu', className, {
@@ -40,6 +42,7 @@ const Menu: React.FC<IMenuProps> = (props) => {
 		index: currentActiveIndex ? currentActiveIndex : '0',
 		onSelect: handleSelect,
 		mode,
+		defaultOpenSubMenus,
 	};
 	const renderChildren = () => {
 		return React.Children.map(children, (child, index) => {
@@ -62,6 +65,7 @@ const Menu: React.FC<IMenuProps> = (props) => {
 Menu.defaultProps = {
 	defaultIndex: '0',
 	mode: 'horizontal',
+	defaultOpenSubMenus: [],
 };
 
 export default Menu;

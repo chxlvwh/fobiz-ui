@@ -7,7 +7,7 @@ import SubMenu from './components/Menu/subMenu';
 function App() {
 	return (
 		<div className="App">
-			<Menu defaultIndex="0">
+			<Menu defaultIndex="0" defaultOpenSubMenus={['3']}>
 				<MenuItem>tab1</MenuItem>
 				<MenuItem disabled>tab2</MenuItem>
 				<MenuItem>tab3</MenuItem>
@@ -17,7 +17,7 @@ function App() {
 				</SubMenu>
 			</Menu>
 			<div style={{ padding: '20px' }}>
-				<Menu defaultIndex="0" mode="vertical">
+				<Menu defaultIndex="0" mode="vertical" defaultOpenSubMenus={['2']}>
 					<MenuItem>tab1</MenuItem>
 					<MenuItem disabled>tab2</MenuItem>
 					<SubMenu title="dropdown">

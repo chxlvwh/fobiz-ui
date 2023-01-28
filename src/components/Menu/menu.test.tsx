@@ -43,10 +43,10 @@ describe('test Menu component', () => {
 		expect(tab3Element).toHaveClass('is-active');
 		expect(tab1Element).not.toHaveClass('is-active');
 		// toHaveBeenCalledWith中传的是testProps.onSelect的参数
-		expect(testProps.onSelect).toHaveBeenCalledWith(2);
+		expect(testProps.onSelect).toHaveBeenCalledWith('2');
 		fireEvent.click(disabledElement);
 		expect(disabledElement).not.toHaveClass('is-active');
-		expect(testProps.onSelect).not.toHaveBeenCalledWith(1);
+		expect(testProps.onSelect).not.toHaveBeenCalledWith('1');
 	});
 	it('should render vertical mode when mode is set to vertical', function () {
 		wrapper = render(genMenu(testVerticalProps));
