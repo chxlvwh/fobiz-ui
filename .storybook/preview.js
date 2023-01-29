@@ -9,10 +9,5 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  layout: 'padded'
 }
-
-export const decorators = [
-    Story => {
-        return <div style={{margin: '20px'}}><Story /></div>
-    }
-]
