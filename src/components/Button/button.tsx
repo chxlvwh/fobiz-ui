@@ -7,15 +7,14 @@ export type ButtonType = 'primary' | 'default' | 'danger' | 'link';
 export interface BaseButtonProps extends ButtonHTMLAttributes<HTMLElement> {
 	/** 类名 */
 	className?: string;
-	/** 类名 */
+	/** 按钮失效状态 */
 	disabled?: boolean;
-	/** 类名 */
+	/** 设置按钮大小 */
 	size?: ButtonSize;
-	/** 类名 */
+	/** 设置按钮类型 */
 	btnType?: ButtonType;
-	/** 类名 */
 	children?: ReactNode;
-	/** 类名 */
+	/** 点击跳转的地址，指定此属性 button 的行为和 a 链接一致 */
 	href?: string;
 }
 
@@ -24,7 +23,7 @@ type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLAnchorElemen
 export type ButtonProps = Partial<CommonButtonProps> & AnchorButtonProps;
 
 /**
- * Button 组件。
+ * Button 按钮用于开始一个即时操作。
  *
  * ~~~js
  * // 这样引用

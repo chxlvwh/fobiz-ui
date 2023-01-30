@@ -6,6 +6,12 @@ import { Input } from './input';
 export default {
 	title: 'Components/Input',
 	component: Input,
+	argTypes: {
+		disabled: { control: { type: 'boolean' }, defaultValue: false },
+		prepend: { control: { type: 'text' } },
+		append: { control: { type: 'text' } },
+		icon: { control: { type: 'text' }, defaultValue: 'search' },
+	},
 };
 
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />;

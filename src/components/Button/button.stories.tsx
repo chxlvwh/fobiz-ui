@@ -6,6 +6,10 @@ import { action } from '@storybook/addon-actions';
 export default {
 	title: 'Components/Button',
 	component: Button,
+	argTypes: {
+		disabled: { control: { type: 'boolean' }, defaultValue: false },
+		href: { control: { type: 'text' }, defaultValue: '' },
+	},
 };
 
 //👇 We create a “template” of how args map to rendering

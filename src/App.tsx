@@ -6,6 +6,9 @@ import SubMenu from './components/Menu/subMenu';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { CSSTransition } from 'react-transition-group';
 import Input from './components/Input';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+library.add(fas);
 
 function App() {
 	const [showMessage, setShowMessage] = useState(false);
@@ -15,7 +18,7 @@ function App() {
 				<div>123</div>
 			</CSSTransition>
 			<Input size="sm" icon={faCoffee} />
-			<Input size="sm" append=".com" prepend="http://" />
+			<Input size="sm" append={<strong style={{ color: 'red' }}>.com</strong>} prepend="http://" />
 			<Input size="sm" append=".com" prepend="http://" disabled />
 			<Menu defaultIndex="0" defaultOpenSubMenus={['3']}>
 				<MenuItem>tab1</MenuItem>

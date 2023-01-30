@@ -47,6 +47,7 @@ export const Input: FC<InputProps> = (props) => {
 		delete restProps.defaultValue;
 		restProps.value = fixControlledValue(props.value);
 	}
+	console.log('======[input.tsx：Input：]======', prepend);
 	return (
 		<div className={classes} style={style}>
 			{prepend && <div className="fobiz-input-group-prepend">{prepend}</div>}
