@@ -24,7 +24,7 @@ interface IMenuContext {
 
 export const MenuContext = createContext<IMenuContext>({ activeIndex: '0' });
 
-const Menu: React.FC<IMenuProps> = (props) => {
+export const Menu: React.FC<IMenuProps> = (props) => {
 	const { defaultIndex, className, mode, style, onSelect, children, defaultOpenSubMenus } = props;
 	const [currentActiveIndex, setCurrentActiveIndex] = React.useState<string>(defaultIndex || '0');
 

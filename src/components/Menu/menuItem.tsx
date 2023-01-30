@@ -11,7 +11,7 @@ export interface IMenuItemProps {
 	disabled?: boolean;
 }
 
-const MenuItem: React.FC<IMenuItemProps> = (props) => {
+export const MenuItem: React.FC<IMenuItemProps> = (props) => {
 	const { index, children, className, style, disabled } = props;
 	const context = useContext(MenuContext);
 	const classes = classnames('fobiz-menu-item', className, {

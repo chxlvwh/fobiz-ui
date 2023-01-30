@@ -4,8 +4,8 @@ import Menu from './components/Menu/menu';
 import MenuItem from './components/Menu/menuItem';
 import SubMenu from './components/Menu/subMenu';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
-import Icon from './components/Icon/icon';
 import { CSSTransition } from 'react-transition-group';
+import Input from './components/Input';
 
 function App() {
 	const [showMessage, setShowMessage] = useState(false);
@@ -14,12 +14,9 @@ function App() {
 			<CSSTransition in={showMessage} timeout={300} classNames="zoom-in-top" unmountOnExit>
 				<div>123</div>
 			</CSSTransition>
-			<Icon icon={faCoffee} theme="primary" size="2x" />
-			<Icon icon={faCoffee} theme="danger" size="2x" />
-			<Icon icon={faCoffee} theme="info" size="2x" />
-			<Icon icon={faCoffee} theme="warning" size="2x" />
-			<Icon icon={faCoffee} theme="light" size="2x" />
-			<Icon icon={faCoffee} theme="dark" size="2x" />
+			<Input size="sm" icon={faCoffee} />
+			<Input size="sm" append=".com" prepend="http://" />
+			<Input size="sm" append=".com" prepend="http://" disabled />
 			<Menu defaultIndex="0" defaultOpenSubMenus={['3']}>
 				<MenuItem>tab1</MenuItem>
 				<MenuItem disabled>tab2</MenuItem>
