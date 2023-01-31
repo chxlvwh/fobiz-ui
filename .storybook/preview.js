@@ -13,5 +13,10 @@ export const parameters = {
       date: /Date$/,
     },
   },
-  layout: 'padded'
+  layout: 'padded',
+  options: {
+    storySort: {
+      order: ['Components', ['Button', 'Input', 'Autocomplete', 'Menu', 'Icon']]
+    }
+  }
 }
