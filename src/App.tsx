@@ -6,14 +6,23 @@ import SubMenu from './components/Menu/subMenu';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { CSSTransition } from 'react-transition-group';
 import Input from './components/Input';
+import Icon from './components/Icon';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
+import { AutoComplete } from './index';
+
 library.add(fas);
 
 function App() {
 	const [showMessage, setShowMessage] = useState(false);
 	return (
 		<div className="App">
+			<Icon icon="check-circle" />
+			<AutoComplete
+				fetchSuggestions={() => {
+					return [];
+				}}
+			></AutoComplete>
 			<CSSTransition in={showMessage} timeout={300} classNames="zoom-in-top" unmountOnExit>
 				<div>123</div>
 			</CSSTransition>

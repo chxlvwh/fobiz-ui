@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "esnext",
+    "target": "ES5",
+    // 是否打包类型文件
+    "declaration": true,
+    "jsx": "react",
+    "moduleResolution": "Node",
+    // 支持 import * from 'react'
+    "allowSyntheticDefaultImports": true,
+    // 跳过node_module包类型的验证
+    "skipLibCheck": true
+  },
+  "include": ["src"],
+  "exclude": [
+    "src/**/*.text.tsx",
+    "src/**/*.stories.tsx"
+  ]
+}
