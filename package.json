@@ -12,10 +12,10 @@
     "UI",
     "React"
   ],
-  "homepage": "https://gitee.com/chxlvwh/fobiz-ui",
+  "homepage": "https://github.com/chxlvwh/fobiz-ui",
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/chxlvwh/fobiz-ui"
+    "url": "https://github.com/chxlvwh/fobiz-ui"
   },
   "files": [
     "dist"
