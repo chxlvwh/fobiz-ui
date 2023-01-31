@@ -16,7 +16,7 @@ module.exports = {
         jest: true,
 		es6: true
     },
-    ignorePatterns: ['.eslintrc.js', '.package.json'],
+    ignorePatterns: ['.eslintrc.js', '.package.json', 'src/stories/**/*'],
     rules: {
         '@typescript-eslint/interface-name-prefix': 'off',
         '@typescript-eslint/explicit-function-return-type': 'off',

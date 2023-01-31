@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-regular-svg-icons": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -16,6 +20,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
+    "react-transition-group": "^4.4.5",
     "typescript": "^4.9.4",
     "web-vitals": "^2.1.4"
   },
@@ -24,12 +29,24 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.{ts,tsx}\" --fix"
+    "lint": "eslint \"{src,apps,libs,test}/**/*.{ts,tsx}\" --fix",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -45,8 +62,23 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^6.5.16",
+    "@storybook/addon-controls": "^6.5.16",
+    "@storybook/addon-essentials": "^6.5.16",
+    "@storybook/addon-interactions": "^6.5.16",
+    "@storybook/addon-links": "^6.5.16",
+    "@storybook/builder-webpack5": "^6.5.16",
+    "@storybook/manager-webpack5": "^6.5.16",
+    "@storybook/node-logger": "^6.5.16",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.16",
+    "@storybook/testing-library": "^0.0.13",
+    "@types/react-transition-group": "^4.4.5",
+    "babel-plugin-named-exports-order": "^0.0.2",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.3"
+    "prettier": "^2.8.3",
+    "prop-types": "^15.8.1",
+    "webpack": "^5.75.0"
   }
 }
