@@ -4,7 +4,7 @@ export default {
 	title: 'Welcome/Welcome',
 };
 
-export const Types = () => (
+export const Welcome = () => (
 	<>
 		<h2>Welcome to use fobiz-ui react component library</h2>
 		<br />

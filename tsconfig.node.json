@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "outDir": "dist",
-    "module": "esnext",
-    "target": "ES5",
+    "outDir": "lib",
+    "module": "CommonJS",
+    "target": "ES6",
     // 是否打包类型文件
     "declaration": true,
     "jsx": "react",
