@@ -1,5 +1,13 @@
 # A Tiny React Component library🛴
 
+```javascript
+// 🚩0.2.0版本之后支持`EsModule`和`CommonJs`引入
+const { Button } = require('fobiz-ui');
+//或者
+import { Button } from 'fobiz-ui';
+``` 
+
+
 ## Installation
 
 >npm install fobiz-ui --save
@@ -7,7 +15,7 @@
 ## How to use
 ```javascript
 // import styles
-import 'fobiz-ui/dist/index.css';
+import 'fobiz-ui/lib/index.css';
 // import components
 import { Button } from 'fobiz-ui';
 ```
