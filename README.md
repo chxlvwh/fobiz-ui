@@ -1,4 +1,4 @@
-# A Tiny React Component library🛴
+# A Tiny React Component library 🛴
 
 ```javascript
 // 🚩0.2.0版本之后支持`EsModule`和`CommonJs`引入
