@@ -1,37 +1,55 @@
 {
   "name": "fobiz-ui",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.2.0",
+  "description": "React components library for biz",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "private": false,
+  "license": "MIT",
+  "keywords": [
+    "Component",
+    "UI",
+    "React"
+  ],
+  "homepage": "https://github.com/chxlvwh/fobiz-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chxlvwh/fobiz-ui"
+  },
+  "files": [
+    "lib",
+    "es"
+  ],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-regular-svg-icons": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/classnames": "^2.3.1",
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.11",
-    "@types/react": "^18.0.27",
-    "@types/react-dom": "^18.0.10",
     "classnames": "^2.3.2",
-    "node-sass": "^7.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-scripts": "5.0.1",
-    "react-transition-group": "^4.4.5",
-    "typescript": "^4.9.4",
-    "web-vitals": "^2.1.4"
+    "react-transition-group": "^4.4.5"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint \"{src,apps,libs,test}/**/*.{ts,tsx}\" --fix",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "clean:esbiild": "rimraf ./es",
+    "clean:libbiild": "rimraf ./lib",
+    "build-ts:esbiild": "tsc -p tsconfig.es.json",
+    "build-ts:libbiild": "tsc -p tsconfig.node.json",
+    "build-css:esbiild": "node-sass ./src/styles/index.scss ./es/index.css",
+    "build-css:libbiild": "node-sass ./src/styles/index.scss ./lib/index.css",
+    "build:esbiild": "npm run clean:esbiild && npm run build-ts:esbiild && npm run build-css:esbiild",
+    "build:libbiild": "npm run clean:libbiild && npm run build-ts:libbiild && npm run build-css:libbiild",
+    "build-storybook": "build-storybook -s public",
+    "build": "npm run build:esbiild && npm run build:libbiild",
+    "prepublish": "npm run build"
   },
   "eslintConfig": {
     "extends": [
@@ -62,6 +80,14 @@
     ]
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/classnames": "^2.3.1",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.11",
+    "@types/react": "^18.0.27",
+    "@types/react-dom": "^18.0.10",
     "@storybook/addon-actions": "^6.5.16",
     "@storybook/addon-controls": "^6.5.16",
     "@storybook/addon-essentials": "^6.5.16",
@@ -79,6 +105,13 @@
     "eslint-plugin-prettier": "^4.2.1",
     "prettier": "^2.8.3",
     "prop-types": "^15.8.1",
-    "webpack": "^5.75.0"
+    "rimraf": "^4.1.2",
+    "webpack": "^5.75.0",
+    "node-sass": "^7.0.3",
+    "typescript": "^4.9.4",
+    "react-scripts": "5.0.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "web-vitals": "^2.1.4"
   }
 }

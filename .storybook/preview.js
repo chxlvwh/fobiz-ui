@@ -16,7 +16,7 @@ export const parameters = {
   layout: 'padded',
   options: {
     storySort: {
-      order: ['Components', ['Button', 'Input', 'Autocomplete', 'Menu', 'Icon']]
+      order: ['Welcome', 'Components', ['Button', 'Input', 'Autocomplete', 'Menu', 'Icon']]
     }
   }
 }

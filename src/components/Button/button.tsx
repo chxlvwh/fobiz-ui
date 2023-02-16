@@ -1,4 +1,5 @@
-import React, { AnchorHTMLAttributes, ButtonHTMLAttributes, FC, ReactNode } from 'react';
+import * as React from 'react';
+import { AnchorHTMLAttributes, ButtonHTMLAttributes, FC, ReactNode } from 'react';
 import classnames from 'classnames';
 
 export type ButtonSize = 'lg' | 'sm';

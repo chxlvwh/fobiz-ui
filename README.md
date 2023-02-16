@@ -1,10 +1,34 @@
-# Getting Started with Create React App
+# A Tiny React Component library🛴
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```javascript
+// 🚩0.2.0版本之后支持`EsModule`和`CommonJs`引入
+const { Button } = require('fobiz-ui');
+//或者
+import { Button } from 'fobiz-ui';
+``` 
 
-## Available Scripts
 
-In the project directory, you can run:
+## Installation
+
+>npm install fobiz-ui --save
+
+## How to use
+```javascript
+// import styles
+import 'fobiz-ui/lib/index.css';
+// import components
+import { Button } from 'fobiz-ui';
+```
+
+### Introduction
+🔥`Typescript` with `React Hooks`.\
+🤳Use `react-testing-library` to make unit test.\
+🎁Use `storybook` for native debugging and generating docs.\
+✨Integrate third-party library `React-Awesome` for Icon component.
+
+If you want to debug or practice locally, you might use following orders.\
+In the project directory, you can run:\
+如果想自己做本地调试，下面的命令可能会被用到：
 
 ### `npm start`
 
@@ -12,35 +36,17 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
-You will also see any lint errors in the console.
+You will also see any lint errors in the console.\
+And you can import your component to App.tsx to have a look. 
+### `npm run storybook`
 
-### `npm test`
+Provides a visualized way to debug your component.\
+Open [http://localhost:6006](http://localhost:6006) to view it in the browser.\
+通过 `storybook` 可以更直观调试组件的各种样式
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `npm run lint`
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Format the code using prettier.\
+Using Eslint and Prettier together is a wonderful experience.\
+格式化代码，非常推荐 `Eslint` 和 `Prettier` 配合着用，`Eslint`只检查语法，\
+`Prettier`只做代码风格检查，各司其职。
